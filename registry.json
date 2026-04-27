@@ -1,116 +1,39 @@
 {
-	"$schema": "../sites/docs/static/schema/registry.json",
-	"name": "acme",
-	"homepage": "https://acme.com",
+	"$schema": "https://shadcn-svelte.com/schema/registry.json",
+	"name": "SuxtUi",
+	"homepage": "https://suxtui.revilo0509.net",
 	"items": [
 		{
-			"name": "hello-world",
+			"name": "app",
 			"type": "registry:component",
-			"title": "Hello World",
-			"description": "A simple hello world component",
-			"registryDependencies": ["button"],
+			"title": "App",
+			"description": "A simple App component",
+			"registryDependencies": ["SnippetGuard"],
 			"files": [
 				{
-					"path": "src/lib/registry/blocks/hello-world/hello-world.svelte",
+					"path": "src/lib/registry/blocks/App/App.svelte",
 					"type": "registry:component"
 				}
 			],
 			"meta": {
-				"author": "huntabyte"
+				"author": "revilo0509"
 			}
 		},
 		{
-			"name": "example-form",
+			"name": "snippet-guard",
 			"type": "registry:component",
-			"title": "Example Form",
-			"description": "A contact form with Zod validation.",
-			"dependencies": ["zod"],
-			"registryDependencies": ["button", "input", "label", "textarea", "card"],
-			"files": [
-				{
-					"path": "src/lib/registry/blocks/example-form/example-form.svelte",
-					"type": "registry:component"
-				}
-			]
-		},
-		{
-			"name": "complex-component",
-			"type": "registry:component",
-			"title": "Complex Component",
-			"description": "A complex component showing hooks, libs and components.",
-			"registryDependencies": ["card"],
-			"files": [
-				{
-					"path": "src/lib/registry/blocks/complex-component/+page.svelte",
-					"type": "registry:page",
-					"target": "src/routes/pokemon/+page.svelte"
-				},
-				{
-					"path": "src/lib/registry/blocks/complex-component/components/pokemon-card.svelte",
-					"type": "registry:component"
-				},
-				{
-					"path": "src/lib/registry/blocks/complex-component/components/pokemon-image.svelte",
-					"type": "registry:component"
-				},
-				{
-					"path": "src/lib/registry/blocks/complex-component/lib/pokemon.ts",
-					"type": "registry:lib"
-				},
-				{
-					"path": "src/lib/registry/blocks/complex-component/hooks/use-pokemon.svelte.ts",
-					"type": "registry:hook"
-				}
-			]
-		},
-		{
-			"name": "example-with-css",
-			"type": "registry:component",
-			"title": "Example with CSS",
-			"description": "A login form with a CSS file.",
+			"title": "SnippetGuard",
+			"description": "A simple snippet wrapper to simplity rendering nullable snippets",
 			"registryDependencies": [],
 			"files": [
 				{
-					"path": "src/lib/registry/blocks/example-with-css/example-card.svelte",
-					"type": "registry:component"
-				},
-				{
-					"path": "src/lib/registry/blocks/example-with-css/example-card.css",
+					"path": "src/lib/registry/ui/SnippetGuard/SnippetGuard.svelte",
 					"type": "registry:component"
 				}
-			]
-		},
-		{
-			"name": "stepper",
-			"type": "registry:ui",
-			"registryDependencies": [],
-			"files": [
-				{
-					"path": "src/lib/registry/ui/stepper/stepper.svelte",
-					"type": "registry:file"
-				},
-				{
-					"path": "src/lib/registry/ui/stepper/stepper-item.svelte",
-					"type": "registry:file"
-				},
-				{
-					"path": "src/lib/registry/ui/stepper/index.ts",
-					"type": "registry:file"
-				}
-			]
-		},
-		{
-			"name": "checkout-steps",
-			"type": "registry:component",
-			"title": "Checkout Steps",
-			"description": "A checkout steps component.",
-			"registryDependencies": ["local:stepper"],
-			"files": [
-				{
-					"path": "src/lib/registry/blocks/checkout-steps/checkout-steps.svelte",
-					"type": "registry:component"
-				}
-			]
+			],
+			"meta": {
+				"author": "revilo0509"
+			}
 		}
 	]
 }
