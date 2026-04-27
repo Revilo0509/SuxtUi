@@ -1,5 +1,5 @@
 import { readdirSync, readFileSync, statSync } from "node:fs";
-import { extname } from "node:path";
+import { extname, join } from "node:path";
 
 type RegistryFileType =
   | "registry:component"
@@ -35,6 +35,12 @@ interface RegistryItem {
   dependencies?: string[];
   devDependencies?: string[];
   registryDependencies?: string[];
+  categories?: string[];
+  author?: string;
+  cssVars?: Record<string, unknown>;
+  css?: Record<string, unknown>;
+  docs?: string;
+  meta?: Record<string, unknown>;
 }
 
 /** Derive a file's registry type from its name and extension. */
@@ -76,12 +82,25 @@ function collectFiles(name: string, entry: string, isDir: boolean): RegistryFile
   ];
 }
 
+function loadMetadata(entry: string, isDir: boolean): Partial<RegistryItem> {
+  if (!isDir) return {};
+
+  const metaPath = join("src/lib/components", entry, "metadata.json");
+  try {
+    const metaFile = readFileSync(metaPath, "utf-8");
+    return JSON.parse(metaFile);
+  } catch {
+    return {};
+  }
+}
+
 export function buildRegistryItem(
   name: string,
   entry: string,
   isDir: boolean
 ): RegistryItem {
   const files = collectFiles(name, entry, isDir);
+  const meta = loadMetadata(entry, isDir);
 
   // A block if it has multiple files, a plain component if single
   const type: RegistryItemType =
@@ -92,7 +111,16 @@ export function buildRegistryItem(
     name,
     title: toTitle(name),
     type,
-    description: "",
+    description: meta.description ?? "",
     files,
+    dependencies: meta.dependencies,
+    devDependencies: meta.devDependencies,
+    registryDependencies: meta.registryDependencies,
+    categories: meta.categories,
+    author: meta.author,
+    cssVars: meta.cssVars,
+    css: meta.css,
+    docs: meta.docs,
+    meta: meta.meta,
   };
 }
