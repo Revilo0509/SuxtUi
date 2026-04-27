@@ -11,8 +11,8 @@
 	const { header, children, footer }: props = $props();
 </script>
 
-<div class="flex flex-col">
-	<SnippetGuard snippet={header} class="flex-1" />
-	<SnippetGuard snippet={children} />
-	<SnippetGuard snippet={footer} />
+<div class="flex h-screen w-screen flex-col">
+	<SnippetGuard snippet={header} class="shrink-0" />
+	<SnippetGuard snippet={children} class="flex-1 overflow-auto" />
+	<SnippetGuard snippet={footer} class="shrink-0" />
 </div>
