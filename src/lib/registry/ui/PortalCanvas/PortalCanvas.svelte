@@ -19,8 +19,8 @@
 </script>
 
 <script lang="ts">
-	const { name }: { name: string } = $props();
-	let snippets = $derived(getSnippets(name));
+	const { id }: { id: string } = $props();
+	let snippets = $derived(getSnippets(id));
 </script>
 
 {#each snippets as snippet (snippet.name)}

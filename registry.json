@@ -8,7 +8,7 @@
 			"type": "registry:component",
 			"title": "App",
 			"description": "Aligns snippets to a predefined layout",
-			"registryDependencies": ["SnippetGuard"],
+			"registryDependencies": ["snippet-guard"],
 			"files": [
 				{
 					"path": "src/lib/registry/blocks/App/App.svelte",
@@ -24,7 +24,7 @@
 			"type": "registry:component",
 			"title": "Portal",
 			"description": "Teleports the children elements to the specified PortalCanvas",
-			"registryDependencies": ["SnippetGuard"],
+			"registryDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/registry/ui/Portal/Portal.svelte",
@@ -40,7 +40,7 @@
 			"type": "registry:component",
 			"title": "PortalCanvas",
 			"description": "Creates a element which a portal can teleport to",
-			"registryDependencies": ["SnippetGuard"],
+			"registryDependencies": [],
 			"files": [
 				{
 					"path": "src/lib/registry/ui/PortalCanvas/PortalCanvas.svelte",
