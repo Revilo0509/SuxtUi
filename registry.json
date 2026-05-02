@@ -8,7 +8,7 @@
 			"type": "registry:component",
 			"title": "App",
 			"description": "Aligns snippets to a predefined layout",
-			"registryDependencies": ["snippet-guard"],
+			"registryDependencies": ["https://suxtui.revilo0509.net/r/snippet-guard.json"],
 			"files": [
 				{
 					"path": "src/lib/registry/blocks/App/App.svelte",
