@@ -11,7 +11,7 @@
 			"registryDependencies": ["https://suxtui.revilo0509.net/r/snippet-guard.json"],
 			"files": [
 				{
-					"path": "src/lib/registry/blocks/App/App.svelte",
+					"path": "src/lib/registry/blocks/App.svelte",
 					"type": "registry:component"
 				}
 			],
@@ -27,7 +27,7 @@
 			"registryDependencies": [],
 			"files": [
 				{
-					"path": "src/lib/registry/ui/Portal/Portal.svelte",
+					"path": "src/lib/registry/ui/Portal.svelte",
 					"type": "registry:component"
 				}
 			],
@@ -43,7 +43,7 @@
 			"registryDependencies": [],
 			"files": [
 				{
-					"path": "src/lib/registry/ui/PortalCanvas/PortalCanvas.svelte",
+					"path": "src/lib/registry/ui/PortalCanvas.svelte",
 					"type": "registry:component"
 				}
 			],
@@ -59,7 +59,7 @@
 			"registryDependencies": [],
 			"files": [
 				{
-					"path": "src/lib/registry/ui/SnippetGuard/SnippetGuard.svelte",
+					"path": "src/lib/registry/ui/SnippetGuard.svelte",
 					"type": "registry:component"
 				}
 			],

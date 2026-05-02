@@ -1,5 +1,5 @@
 <script lang="ts">
-	import SnippetGuard from "$lib/registry/ui/SnippetGuard/SnippetGuard.svelte";
+	import SnippetGuard from "$lib/registry/ui/SnippetGuard.svelte";
 	import type { Snippet } from "svelte";
 
 	interface props {
