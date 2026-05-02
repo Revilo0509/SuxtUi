@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onDestroy, type Snippet } from "svelte";
-	import { addSnippet, deleteSnippet } from "../PortalCanvas/PortalCanvas.svelte";
+	import { addSnippet, deleteSnippet } from "./PortalCanvas.svelte";
 
 	interface props {
 		to: string;
