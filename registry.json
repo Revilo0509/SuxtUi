@@ -11,7 +11,7 @@
 			"registryDependencies": ["https://suxtui.revilo0509.net/r/snippet-guard.json"],
 			"files": [
 				{
-					"path": "src/lib/registry/blocks/App.svelte",
+					"path": "src/lib/registry/ui/App.svelte",
 					"type": "registry:component"
 				}
 			],
@@ -40,7 +40,7 @@
 			"type": "registry:component",
 			"title": "PortalCanvas",
 			"description": "Creates a element which a portal can teleport to",
-			"registryDependencies": [],
+			"registryDependencies": ["https://suxtui.revilo0509.net/r/portal-canvas.json"],
 			"files": [
 				{
 					"path": "src/lib/registry/ui/PortalCanvas.svelte",
@@ -59,7 +59,7 @@
 			"registryDependencies": [],
 			"files": [
 				{
-					"path": "src/lib/registry/ui/SnippetGuard.svelte",
+					"path": "src/lib/registry/lib/SnippetGuard.svelte",
 					"type": "registry:component"
 				}
 			],

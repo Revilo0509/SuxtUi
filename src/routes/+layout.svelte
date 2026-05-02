@@ -1,5 +1,5 @@
 <script lang="ts">
-	import App from "$lib/registry/blocks/App.svelte";
+	import App from "$lib/registry/ui/App.svelte";
 	import "../app.css";
 
 	let { children } = $props();
